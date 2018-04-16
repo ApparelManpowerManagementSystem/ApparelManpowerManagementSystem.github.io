@@ -1,0 +1,66 @@
+.outterSignin{
+    background-color: antiquewhite;
+    padding: 30px 0 0 0;
+}
+.signin{
+    display: block;
+    margin: auto;
+    padding: 20px 0 90px 10px;
+    width: 70%;
+    background-color: white;
+    color:  #363737 ;
+}
+.signin #head{
+    font-family: Arial;
+    font-size: 4.7vw;
+    width: 100%;
+}
+.signin #worker,#supplier{
+    display: inline-block;
+    font-family: Arial;
+    font-size: 1vw;
+    width: 45%;
+}
+.signin #supplier #head{
+    font-size: 2vw
+}
+.signin #worker #head{
+    font-size: 2vw
+}
+.signin #supplier{
+    padding: 0 0 0 0;
+}
+
+.signin button{
+    padding: 20px;
+    color: white;
+    background-color: #4bbfcf;
+    border: 0;
+}
+.signin button:hover{
+    
+    background-color:  #0892a5;
+
+}
+@media only screen and (max-width: 600px){
+.signin #worker,#supplier{
+    font-family: Arial;
+    width: 100%;
+    padding: 0 0 0 0;
+    font-size: 3vw
+}
+.signin #supplier{
+    padding: 0 0 0 0;
+}
+.signin #head{
+    font-family: Arial;
+    font-size: 10vw;
+    width: 100%;
+} 
+.signin #supplier #head{
+    font-size: 4vw
+}
+.signin #worker #head{
+    font-size: 4vw
+}
+}
