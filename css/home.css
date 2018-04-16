@@ -57,8 +57,8 @@
 
 .image #homeImage{
     width: 100%;
-    max-height: 500px;
-    padding: 8px 0 0 0
+    max-height: 600px;
+    padding: 50px 0 0 0
 }
 
 .gallery{
@@ -193,7 +193,7 @@
 .image #homeImage{
     width: 100%;
     height: 20%;
-    padding: 7px 0 7px 0;
+    padding: 20px 0 7px 0;
 }
 .gallery{
     max-height: 100%;
@@ -212,7 +212,7 @@
 }
 .gallery div p{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 4vw;
+    font-size: 3.2vw;
 }
 .footer{
     vertical-align: middle;
@@ -227,25 +227,26 @@
 
 }
 .footer .fPart{
-    padding: 0 0 0 0;
-    height: 50%;
+    height: 100%;
     border-bottom: white;
 }
 
 .footer .fPart button{
-    padding: 10px;
-    vertical-align: middle;
     background-color: black;
     border: 1px solid white;
     color: white;
     font-size: 2.8vw;
-    width: 70%;
+    top: 50%;
+    width: 50%;
+    margin: auto;
+    display: block;
 }
 
 
 .footer .sPart{
     padding: 10px 0 0 5px;
     height: 50%;
+    text-align: center;
 }
 .footer .sPart div{
     width: 100%;
