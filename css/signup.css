@@ -19,8 +19,8 @@
     text-align: center;
     padding: 13px 8px;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2vw;
+    font-family: corbel;
+    font-size: 1.1vw;
     }
 
 .main li a:hover:not(#signup) {
@@ -103,15 +103,62 @@
     display: inline-block;
 }
 .footer .sPart div p{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: corbel;
     color: white;
     font-size: 1.2vw;
 }
 
+body{
+    padding: 0;
+    margin: 0;
+}
+.outterSignin{
+    background-color: antiquewhite;
+    padding: 30px 0 0 0;
+}
+.signin{
+    display: block;
+    margin: auto;
+    padding: 20px 0 90px 10px;
+    width: 70%;
+    background-color: white;
+    color:  #363737 ;
+}
+.signin #head{
+    font-family: corbel;
+    font-size: 4vw;
+    width: 100%;
+    padding: 0;
+}
+.signin #worker,#supplier{
+    display: inline-block;
+    font-family: corbel;
+    font-size: 1vw;
+    width: 45%;
+}
+.signin #supplier #head{
+    font-size: 2vw
+}
+.signin #worker #head{
+    font-size: 2vw
+}
+.signin #supplier{
+    padding: 0 0 0 0;
+}
 
+.signin button{
+    padding: 20px;
+    color: white;
+    background-color: #4bbfcf;
+    border: 0;
+    width: 60%;
+}
+.signin button:hover{
     
-@media only screen and (max-width: 600px){         
+    background-color:  #0892a5;
 
+}
+@media only screen and (max-width: 600px){
 * {
     box-sizing: border-box;
 }  
@@ -133,7 +180,7 @@
     text-align: center;
     padding: 13px 8px;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: corbel;
     font-size: 3vw;
 }
 
@@ -214,10 +261,34 @@
     display: inline-block;
 }
 .footer .sPart div p{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: corbel;
     color: white;
     font-size: 2.8vw;
 }
 
 
+.signin{
+    padding: 10px 0 50px 10px;
+    width: 100%;
+}
+.signin #worker,#supplier{
+    font-family: corbel;
+    width: 100%;
+    padding: 0;
+    font-size: 3vw
+}
+.signin #supplier{
+    padding: 0 0 0 0;
+}
+.signin #head{
+    font-family: corbel;
+    font-size: 10vw;
+    width: 100%;
+} 
+.signin #supplier #head{
+    font-size: 4vw
+}
+.signin #worker #head{
+    font-size: 4vw
+}
 }
