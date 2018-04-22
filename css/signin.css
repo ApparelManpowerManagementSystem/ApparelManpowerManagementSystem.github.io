@@ -291,4 +291,13 @@ body{
 .signin #worker #head{
     font-size: 4vw
 }
+.signin button{
+    padding: 12px;
+    color: white;
+    background-color: #4bbfcf;
+    border: 0;
+    width: 60%;
+    font-family: corbel;
+    font-size: 3.5vw;
+}
 }
