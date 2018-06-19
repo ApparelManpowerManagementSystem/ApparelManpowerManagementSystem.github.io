@@ -1,23 +1,25 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Manpower Finding</title>
-        <link rel="shortcut icon" href="./Assests/logo.png" />
+        <link rel="shortcut icon" href="Assests/logo.png" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="./CSS/home.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
     </head>
-    <body  data-spy="scroll" data-target=".navbar" data-offset="50">
+    <body>
         <div class="container-fluid">
             <div class="row">
-                <nav class="navbar navbar-default  navbar-fixed-top">
-                   <div class="nav navbar-header">
-                        <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-align-justify"></span></a>
-                    </div>
+                <nav class="navbar navbar-inverse  navbar-fixed-top">
+                   
                     <ul class="nav navbar-nav">
+                        <li><a href="#"><span class="glyphicon glyphicon-align-justify"></span></a></li>
                         <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -33,17 +35,18 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" data-dismiss="modal" class="close">&times;</button>
-                                <h4 class="modal-title">Log In</h4>
+                                <h4 class="modal-title">login</h4>
                             </div>
                             <ul class="nav nav-tabs">
-                                <li class="active"><a href="#worker" data-toggle="tab">Worker</a></li>
-                                <li><a href="#supplier" data-toggle="tab">Supplier</a></li>
-                                <li><a href="#company" data-toggle="tab">Company</a></li>
+                                
+                                <li class="active"><a href="#worker" data-toggle="tab">worker</a></li>
+                                <li><a href="#supplier" data-toggle="tab">supplier</a></li>
+                                <li><a href="#company" data-toggle="tab">company</a></li>
                                 
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="worker">
-                                    <form action="#" autocomplete="on">
+                                    <form action="login.php" autocomplete="on" method="post">
                                         <div class="form-group">
                                             <input type="text" class="form-control" placeholder="Enter your mobile number Or email" name="nameWL" required><br>
                                             <input type="password" class="form-control" placeholder="Enter your password" name="pwdWL" required><br>
@@ -53,7 +56,7 @@
                                     
                                 </div>
                                 <div class="tab-pane" id="supplier">
-                                    <form action="#" autocomplete="on">
+                                    <form action="login.php" autocomplete="on" method="post">
                                         <div class="form-group">
                                             <input type="text" class="form-control" placeholder="Enter your mobile number Or email" name="nameSL" required><br>
                                             <input type="password" class="form-control" placeholder="Enter your password" name="pwdSL" required><br>
@@ -63,7 +66,7 @@
                                 
                                 </div>
                                 <div class="tab-pane" id="company">
-                                    <form action="#" autocomplete="on">
+                                    <form action="login.php" autocomplete="on"method="post">
                                         <div class="form-group">
                                             <input type="text" class="form-control" placeholder="Enter company email" name="nameCL" required><br>
                                             <input type="password" class="form-control" placeholder="Enter your password" name="pwdCL" required><br>
@@ -73,7 +76,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" data-dismiss="modal" class="btn btn-danger">Close</button>
+                                <button type="button" data-dismiss="modal" class="btn btn-danger">close</button>
                             </div>
                         </div>
                     </div>
@@ -85,21 +88,21 @@
                       <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Sign Up</h4>
+                            <h4 class="modal-title">signup</h4>
                         </div>
                         <ul class="nav nav-tabs" id="tabContent">
-                            <li class="active"><a href="#worker" data-toggle="tab">Worker</a></li>
-                            <li><a href="#company" data-toggle="tab">Company</a></li>
-                            <li><a href="#supplier" data-toggle="tab">Supplier</a></li>
+                            <li class="active"><a href="#worker" data-toggle="tab">worker</a></li>
+                            <li><a href="#company" data-toggle="tab">company</a></li>
+                            <li><a href="#supplier" data-toggle="tab">supplier</a></li>
                         </ul>
                           <div class="tab-content">
                             <div class="tab-pane active" id="worker">
-                                <form action="#" autocomplete="on">
+                                <form action="register.php" autocomplete="on" method="post">
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="Enter your name" name="nameWR" required><br>
                                         <input type="text" class="form-control" placeholder="Enter mobile phone number" name="mobileWR" required><br>
                                         <input type="email" class="form-control" placeholder="Enter email" name="emailWR" required><br>
-                                        <input type="password" class="form-control" placeholder="Type a password" name="pwdWR" required><br>
+                                        <input type="password" class="form-control" placeholder="Type a password" name="pwd1WR" required><br>
                                         <input type="password" class="form-control" placeholder="Confirm password" name="pwd2WR" required><br>
                                         <input type="submit" class="form-control" value="Submit" name="submitWR" required>
                                     </div>
@@ -108,7 +111,7 @@
                             </div>
 
                             <div class="tab-pane" id="company">
-                                <form action="#" autocomplete="on">
+                                <form action="register.php" autocomplete="on" method="post">
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="Enter your name" name="nameCR" required><br>
                                         <input type="text" class="form-control" placeholder="Enter mobile phone number" name="mobileCR" required><br>
@@ -121,7 +124,7 @@
                                 </form>
                             </div> 
                             <div class="tab-pane" id="supplier">
-                                <form action="#" autocomplete="on">
+                                <form action="register.php" autocomplete="on" method="post">
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="Enter your name" name="nameSR" required><br>
                                         <input type="text" class="form-control" placeholder="Enter mobile phone number" name="mobileSR" required><br>
@@ -136,7 +139,7 @@
                         </div>
                         
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">close</button>
                         </div>
                       </div>
                     </div>
@@ -147,7 +150,12 @@
                 <div id="content" class="col-md-12"></div>
             </div>
             <div class="row">
-                <div id="footer" class="col-md-12"></div>
+                
+                <div id="footer" class="col-md-12">
+                    
+                   
+                
+                </div>
             </div>
     </body>
 </html>
