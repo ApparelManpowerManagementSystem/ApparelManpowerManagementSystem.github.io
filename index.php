@@ -19,7 +19,6 @@
                 <nav class="navbar navbar-inverse  navbar-fixed-top">
                    
                     <ul class="nav navbar-nav">
-                        <li><a href="#"><span class="glyphicon glyphicon-align-justify"></span></a></li>
                         <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
