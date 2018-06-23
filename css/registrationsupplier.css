@@ -1,6 +1,7 @@
 body{
     padding: 0;
     margin: 0;
+    
 }
 * {
     box-sizing: border-box;
@@ -24,7 +25,7 @@ body{
     padding: 13px 8px;
     text-decoration: none;
     font-family: corbel;
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     }
 
 .main li a:hover:not(#signup) {
@@ -35,63 +36,59 @@ body{
 .main #signup{
     background-color: #800000;
     color: white;
-    padding: 1;
-}
-  
-.slogan{
-    margin: 0;
-    border:0;
-    padding-left: 300px
-}
-.slogan #fLine{
-    font-family: gabriola;
-    font-style: normal;
-    color: #404040;
-    padding-top: 0;
-    font-size: 3vw;
-}
-.slogan #sLine{
-    font-family: gabriola;
-    color: dimgray;
-    line-height: 0;
-    padding-left: 90px;
-    padding-bottom: 5px;
-    font-size: 2.4vw;
+    padding: 10px;
 }
 
-.image #homeImage{
-    width: 100%;
-    max-height: 600px;
-    padding: 50px 0 0 0
-}
-
-.gallery{
-    height: 100%;
-    width: 100%;    
-}
-    
-.gallery #sImage,#fImage,#tImage{
-    padding: 100px 80px 80px 80px; 
-    width: 32%;
-    display: inline-block;
-    
-}
-.gallery div p{
+.middle{
+    padding: 0;
     font-family: corbel;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.middle .form{
+    margin: 0 auto;
+    width: 50%;
+    padding: 50px 15px 80px 15px;
+    background-color: bisque;
+}
+.middle .form input{
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+    width: 80%;
+    font-size: 1vw;
+    border: 1px solid  #a2a6a6;
+}
+
+.middle .form p{
+    margin: 0 auto;
+    display: block;
+    padding: 0 0 13px 0;
+    width: 80%;
+    font-size: 1.1vw;
+    text-align: center;
+}
+.middle .form #head{
+    font-family: corbel;
+    font-size: 2vw;
+    text-align: left;
+}
+
+
+.middle .form #submit{
+    border: 0;
+    padding: 15px;
+    width: 80%;
+    background-color: #151616;
+    color: white;
+    text-align: left;
     font-size: 1vw;
 }
-.gallery #sImage img{
-    width:100%;
-    height: 100%;
-}   
-.gallery #fImage img{
-    width:100%;
-    height: 100%;
-}   
-.gallery #tImage img{
-    width:100%;
-    height: 100%;
+.middle .form #submit:hover{
+    background-color:  #4c4e4e;
 }
+
 
 .footer{
     background-color: black;
@@ -107,7 +104,7 @@ body{
 .footer .fPart{
     padding: 0 0 0 5px;
     height: 100%;
-    border-bottom: white;
+    display: block;
 }
 
 .footer .fPart button{
@@ -116,7 +113,8 @@ body{
     background-color: black;
     border: 1px solid white;
     color: white;
-    font-size: 1vw;
+    font-size: 1.2vw;
+    font-family: corbel;
 }
 
 .footer .sPart{
@@ -130,8 +128,10 @@ body{
 .footer .sPart div p{
     font-family: corbel;
     color: white;
-    font-size: 1vw;
+    font-size: 1.2vw;
 }
+
+
     
 @media only screen and (max-width: 600px){         
 
@@ -172,52 +172,60 @@ body{
     padding: 1;
 }
 
-.slogan{
+
+.middle{
+    padding: 0;
+    font-family: corbel;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.middle .form{
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+    background-color: bisque;
+}
+.middle .form input{
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
     width: 80%;
-    float: left;
-    padding-left: 2px;
-    border: 1px solid white;
-}
-    
-.slogan #fLine{
-    font-family: gabriola;
-    font-style: normal;
-    color: #404040;
-    padding: 0 0 0 0;
-    font-size: 8.3vw;
-}
-.slogan #sLine{
-    font-family: gabriola;
-    color: dimgray;
-    line-height: 0;
-    padding: 0 0 0 0;
-    font-size: 7.3vw;
+    font-size: 3vw;
+    border: 1px solid  #a2a6a6;
 }
 
-.image #homeImage{
-    width: 100%;
-    height: 20%;
-    padding: 20px 0 7px 0;
+.middle .form p{
+    margin: 0 auto;
+    display: block;
+    padding: 0 0 13px 0;
+    width: 80%;
+    font-size: 3vw;
+    text-align: center;
 }
-.gallery{
-    max-height: 100%;
-}
-.gallery #fImage{
-    width:100%;
-    padding: 50px 50px 50px 50px;    
-}
-.gallery #sImage{
-    width:100%;
-    padding: 20px 50px 50px 50px;    
-}
-.gallery #tImage{
-    width:100%;
-    padding: 20px 50px 50px 50px;    
-}
-.gallery div p{
+.middle .form #head{
     font-family: corbel;
-    font-size: 3.2vw;
+    font-size: 5vw;
+    text-align: left;
 }
+
+
+.middle .form #submit{
+    border: 0;
+    padding: 15px;
+    width: 80%;
+    background-color: #151616;
+    color: white;
+    text-align: center;
+    font-size: 3vw;
+}
+.middle .form #submit:hover{
+    background-color:  #4c4e4e;
+}
+
+    
+    
+
 .footer{
     vertical-align: middle;
     background-color: black;
@@ -231,25 +239,26 @@ body{
 
 }
 .footer .fPart{
+    padding: 0;
     height: 100%;
-    border-bottom: white;
+    width: 100%;
 }
 
 .footer .fPart button{
+    padding: 10px;
     background-color: black;
     border: 1px solid white;
     color: white;
-    font-size: 2.8vw;
-    top: 50%;
-    width: 50%;
-    margin: auto;
+    font-size: 2.5vw;
+    width: 70%;  
     display: block;
-}
+    margin: 0 auto;
 
+}
 
 .footer .sPart{
     padding: 10px 0 0 5px;
-    height: 50%;
+    height: 100%;
     text-align: center;
 }
 .footer .sPart div{

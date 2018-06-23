@@ -1,0 +1,246 @@
+.main ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+.main li {
+    float: left;
+}
+
+.main li a {
+    display: block;
+    color: dimgray;
+    text-align: center;
+    padding: 13px 8px;
+    text-decoration: none;
+    font-family: corbel;
+    font-size: 1.1vw;
+    }
+
+.main li a:hover:not(#signup) {
+    border-top: 2px solid green;
+    color:forestgreen;
+}
+          
+.main #signup{
+    background-color: #800000;
+    color: white;
+    padding: 13px;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.top{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+p{
+    margin: 0;
+    font-family: corbel;
+    color: #383736;
+}
+
+.middle{
+    background-color:  #ceccca ;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.middle #name{
+    font-size: 2.4vw;
+}
+.middle #sign{
+    margin: 0 auto;
+    width: 50%;
+    padding: 60px 100px 200px 100px;
+}
+
+.middle input{
+    border: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0 20px 0;
+    font-family: corbel;;
+    font-size: 1vw;
+}
+
+.middle button:hover{
+    background-color: #0892a5;
+}
+.middle button{
+    border: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+    background-color: #4bbfcf;
+    color: white;
+}
+
+.middle #sign a{
+    text-decoration: none;
+    color: #4bbfcf;
+}
+.middle #sign a:hover{
+    color: #0892a5;
+}
+
+
+.footer{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+
+.footer .sPart{
+    padding: 25px 0 100px 5px;
+    height: 100%;
+}
+.footer .sPart div{
+    width: 32%;
+    display: inline-block;
+}
+.footer .sPart div p{
+    font-family: corbel;
+    color: white;
+    font-size: 1.1vw;
+    padding: 10px 5px 5px 5px;
+}
+
+
+    
+@media only screen and (max-width: 600px){         
+
+.main ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+.main li {
+    float: left;
+}
+
+.main li a {
+    display: block;
+    color: dimgray;
+    text-align: center;
+    padding: 13px 8px;
+    text-decoration: none;
+    font-family: corbel;
+    font-size: 2.5vw;
+}
+
+
+.main li a:hover:not(#signup) {
+    border-top: 2px solid green;
+    color:forestgreen;
+}
+    
+.main #signup{
+    background-color: #800000;
+    color: white;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.top{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+p{
+    margin: 0;
+    font-family: sans-serif;
+    color: #383736;
+}
+
+.middle{
+    background-color:  #ceccca ;
+    padding: 0 7px 0 0;
+    width: 98%;
+    height: 100%;
+}
+.middle #name{
+    font-size: 7vw;
+}
+.middle #account{
+    font-size: 4vw;
+}
+.middle #sign{
+    width: 80%;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.middle input{
+    border: 0;
+    width: 100%;
+    margin: 0;
+    padding: 15px 0 15px 0;
+    font-family: sans-serif;
+    font-size: 4vw;
+}
+
+.middle button:hover{
+    background-color:  #0892a5 ;
+}
+.middle button{
+    border: 0;
+    width: 100%;
+    text-align: center;
+    background-color:  #4bbfcf ;
+    padding: 15px;
+    color: white;
+}
+    
+    
+    
+.footer{
+    vertical-align: middle;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.footer .sPart{
+    padding: 0;
+    height: 50%;
+    text-align: center;
+}
+.footer .sPart div{
+    width: 100%;
+    display: inline-block;
+}
+.footer .sPart div p{
+    font-family: corbel;
+    color: white;
+    font-size: 2.5vw;
+}
+
+
+}
