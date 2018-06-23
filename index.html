@@ -1,75 +1,153 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/home.css">
-
-</head>
-    
-<body>
-    
-    <div class="main">
-        <ul>
-            <li><a id="man" href="index.html"><i class="fa fa-home"></i></a></li>
-            <li><a href="#home">ABOUT</a></li>
-            <li><a href="#home">CONTACT</a></li>
-            <li style="float:right"><a id="signup" href="signup.html">SIGN UP</a></li>
-            <li style="float:right"><a id="login" href="signin.html">LOG IN</a></li>
-        </ul>
-    </div>
-    
-    <div class="slogan">
-        
-    </div>
-    
-    <div class="image">
-        <img id="homeImage" src="images/home2.jpg">
-    </div>
-    
-    <div class="gallery">
-        
-        <div id="fImage">
-            <img src="images/easy.jpg">
-            <p><strong> Easiest Way Around</strong></p>
-            <p>One tap and a job comes directly to you. Hop in Supplier knows exactly where to go. And when you get there, just step out. Payment is completely seamless.</p>
-        </div>
-        <div id="sImage">
-            <img src="images/anywhere.jpg">
-            <p><strong>Anywhere, anytime</strong></p>
-            <p>Daily commute. Errand across town. Early morning flight. Late night drinks. Wherever you are headed, count on your manpower job required.</br></br></br></br></p>
-        </div>
-        <div id="tImage">
-            <img src="images/lowcost.jpg">
-            <p><strong>Low-cost to luxury</strong></p>
-            <p>Supplier will gain huge profit. Just tap an find workers for your job</br></br></br></br></br></p>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="fPart">
-            <div id="logo">Manpower Tracking</div>
-            <div id="signUpFooterWorker">
-                <p></p>
-                <button>Sign Up For Supplier</button>
+    <head>
+        <title>Manpower Finding</title>
+        <link rel="shortcut icon" href="./Assests/logo.png" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./CSS/home.css">
+    </head>
+    <body  data-spy="scroll" data-target=".navbar" data-offset="50">
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="navbar navbar-default  navbar-fixed-top">
+                   <div class="nav navbar-header">
+                        <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-align-justify"></span></a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                          <li><a data-toggle="modal" data-target="#signup_modal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                          <li><a data-target="#login_modal" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </nav>
                 
             </div>
-            <div id="signUpFooterSupplier">
-                <button>Become A Manpower Member</button>
+            <div class="row">
+                <div class="modal fade" id="login_modal" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" data-dismiss="modal" class="close">&times;</button>
+                                <h4 class="modal-title">Log In</h4>
+                            </div>
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#worker" data-toggle="tab">Worker</a></li>
+                                <li><a href="#supplier" data-toggle="tab">Supplier</a></li>
+                                <li><a href="#company" data-toggle="tab">Company</a></li>
+                                
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="worker">
+                                    <form action="#" autocomplete="on">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Enter your mobile number Or email" name="nameWL" required><br>
+                                            <input type="password" class="form-control" placeholder="Enter your password" name="pwdWL" required><br>
+                                            <input type="submit" class="form-control" value="Submit" name="submitWL" required>
+                                        </div>
+                                    </form>
+                                    
+                                </div>
+                                <div class="tab-pane" id="supplier">
+                                    <form action="#" autocomplete="on">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Enter your mobile number Or email" name="nameSL" required><br>
+                                            <input type="password" class="form-control" placeholder="Enter your password" name="pwdSL" required><br>
+                                            <input type="submit" class="form-control" value="Submit" name="submitSL" required>
+                                        </div>
+                                    </form>
+                                
+                                </div>
+                                <div class="tab-pane" id="company">
+                                    <form action="#" autocomplete="on">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Enter company email" name="nameCL" required><br>
+                                            <input type="password" class="form-control" placeholder="Enter your password" name="pwdCL" required><br>
+                                            <input type="submit" class="form-control" value="Submit" name="submitCL" required>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" data-dismiss="modal" class="btn btn-danger">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-        
-        </div>
-        <div class="sPart">
-            <div><p>2018 Manpower Tracking Technologies Inc.</p></div>
-            <div>
-                <p>Privacy</p>
-                <p>Accessibility</p>
+            <div class="row">
+                <div class="modal fade" id="signup_modal" role="dialog">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Sign Up</h4>
+                        </div>
+                        <ul class="nav nav-tabs" id="tabContent">
+                            <li class="active"><a href="#worker" data-toggle="tab">Worker</a></li>
+                            <li><a href="#company" data-toggle="tab">Company</a></li>
+                            <li><a href="#supplier" data-toggle="tab">Supplier</a></li>
+                        </ul>
+                          <div class="tab-content">
+                            <div class="tab-pane active" id="worker">
+                                <form action="#" autocomplete="on">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Enter your name" name="nameWR" required><br>
+                                        <input type="text" class="form-control" placeholder="Enter mobile phone number" name="mobileWR" required><br>
+                                        <input type="email" class="form-control" placeholder="Enter email" name="emailWR" required><br>
+                                        <input type="password" class="form-control" placeholder="Type a password" name="pwdWR" required><br>
+                                        <input type="password" class="form-control" placeholder="Confirm password" name="pwd2WR" required><br>
+                                        <input type="submit" class="form-control" value="Submit" name="submitWR" required>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+
+                            <div class="tab-pane" id="company">
+                                <form action="#" autocomplete="on">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Enter your name" name="nameCR" required><br>
+                                        <input type="text" class="form-control" placeholder="Enter mobile phone number" name="mobileCR" required><br>
+                                        <input type="email" class="form-control" placeholder="Enter email" name="emailCR" required><br>
+                                        <input type="password" class="form-control" placeholder="Type a password" name="pwd1CR" required><br>
+                                        <input type="password" class="form-control" placeholder="Confirm password" name="pwd2CR" required><br>
+                                        <input type="submit" class="form-control" value="Submit" name="submitCR" required>
+                                    </div>
+                                    
+                                </form>
+                            </div> 
+                            <div class="tab-pane" id="supplier">
+                                <form action="#" autocomplete="on">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Enter your name" name="nameSR" required><br>
+                                        <input type="text" class="form-control" placeholder="Enter mobile phone number" name="mobileSR" required><br>
+                                        <input type="email" class="form-control" placeholder="Enter email" name="emailSR" required><br>
+                                        <input type="password" class="form-control" placeholder="Type a password" name="pwd1SR" required><br>
+                                        <input type="password" class="form-control" placeholder="Confirm password" name="pwd2SR" required><br>
+                                        <input type="submit" class="form-control" value="Submit" name="submitSR" required>
+                                    </div>
+                                    
+                                </form>
+                            </div> 
+                        </div>
+                        
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
-            <div>
-                <p>Terms</p>
+            <div class="row">
+                <div id="content" class="col-md-12"></div>
             </div>
-        </div>
-    </div>
-    
-  </body>
-  </html>
+            <div class="row">
+                <div id="footer" class="col-md-12"></div>
+            </div>
+    </body>
+</html>
