@@ -17,7 +17,7 @@ navbar-header{
 a{
     background-color: rgba(28, 28, 28,0.8);
     border-radius: 5px;
-    padding: 2px;
+    padding: 10px;
     margin: 2px;
 }
 .form-group{
