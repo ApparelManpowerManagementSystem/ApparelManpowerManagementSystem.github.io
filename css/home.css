@@ -1,8 +1,8 @@
 body{
     background-image: url("../Assests/home.jpg");
     background-repeat: no-repeat;
-    background-attachment:scroll;
-    background-position: center;
+    background-attachment: fixed;
+    
 }
 .navbar{
     border-radius: 0px;
@@ -10,16 +10,20 @@ body{
     border-bottom: 1px solid gray;   
     background-color: rgba(28, 28, 28,0.3);
     padding: 20px;
+    width:inherit;
+    float: right;
+    margin: 0;
+    width: 100%;
 }
-navbar-header{
-    margin: auto;
-}
+
 a{
     background-color: rgba(28, 28, 28,0.8);
     border-radius: 5px;
-    padding: 10px;
-    margin: 2px;
+    padding: 15px;
+    margin: 5px;  
+    display: block;
 }
+
 .form-group{
     width:90%;
     display: block;
@@ -33,7 +37,8 @@ input:not([type=submit]){
     border-radius: 5px;
     box-sizing: border-box;
     width:100%;
-    height: 50px;
+    height: 40px;
+    font-size: 10px;
 }
 
 input[type=submit]{
@@ -43,33 +48,38 @@ input[type=submit]{
     border-radius: 5px;
     box-sizing: border-box;
     width:100%;
-    height: 50px;
+    height: 45px;
     border:none;
     background-color: green;
     color: white;
+    font-size: 10px;
 
 }
 input[type=submit]:hover{
-    background-color: rgba(83, 174, 20);
+    background-color: rgba(90, 174, 20);
 }
 .modal-backdrop {
      background-color: rgba(0,0,0,0.1) !important;
 }
-.tab-pane{
-  background-color: transparent;
+.modal{
+    font-size: 10px;
 }
+
 .nav-tabs li a{
     color: black;
     background-color: white;
+    text-decoration: none;
 }
 #content{
     height: 700px;
     background-color: rgba(28, 28, 28,0.3);
+    
 }
-#footer{
-    height: 100px;
+#footer,#footerUp{
+    height: 200px;
     background-color: rgba(28, 28, 28,0.6);
     border-top: 1px solid gray;
     background-attachment: fixed;
     display: block;
 }
+
