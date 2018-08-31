@@ -54,8 +54,8 @@ mysqli_close($connection); // Closing Connection with Server
     </div>
        
     <div class="form-group">
-        <label for="workerProgress">Invoice ID:</label>
-            <input type="text" class="form-control" id="workerProgress" placeholder="Enter Invoice ID" name="workerProgress">
+        <label for="workerProgress">Worker Progress:</label>
+            <input type="text" class="form-control" id="workerProgress" placeholder="Enter Worker Progress" name="workerProgress">
     </div>
     
     
