@@ -55,15 +55,15 @@ mysqli_close($connection); // Closing Connection with Server
     </div>
     
      <div class="form-group">
-        <label for="supPhone">Supplier Amount:</label>
+        <label for="supPhone">Supplier Phone:</label>
             <input type="text" class="form-control" id="supPhone" placeholder="Enter Supplier Phone" name="supPhone">
     </div>
      <div class="form-group">
-        <label for="supAddress">Job Period:</label>
+        <label for="supAddress">Supplier Address:</label>
             <input type="text" class="form-control" id="supAddress" placeholder="Enter Supplier Address" name="supAddress">
     </div>
     <div class="form-group">
-        <label for="supEmail">Job Price:</label>
+        <label for="supEmail">Suppplier Email:</label>
             <input type="text" class="form-control" id="supEmail" placeholder="Enter Supplier Email" name="supEmail">
     </div>
        
