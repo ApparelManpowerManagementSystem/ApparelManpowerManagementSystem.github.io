@@ -10,11 +10,11 @@ Manpower management in garment industry is a huge problem today. As a solution t
 Manpower supplier gets jobs from a garment company. Then he/she collects manpower workers. Then he sends them to working place and provides tasks. After job has completed supplier inform about it to the company. Worker may pay for days, pieces or other method supplier desire.
 
 #### Limitations
-##### supplier does not have a proper way to collect manpower workers
-##### publish jobs by posting a banner or by publish a notice to a newspaper.
-##### And has no proper way to manage the job when started.
-##### workers may leave suddenly and supplier has no way to quickly inform about that.
-##### Except Supplier and company, Workers are not much aware about IT literacy.
+-**supplier does not have a proper way to collect manpower workers**-
+-**publish jobs by posting a banner or by publish a notice to a newspaper.**-
+-**And has no proper way to manage the job when started.**-
+-**workers may leave suddenly and supplier has no way to quickly inform about that.**-
+-**Except Supplier and company, Workers are not much aware about IT literacy.**-
 
 ### 0.1.4 Goals and Objectives
 ##### Introduce on-demand and economical platform for manpower industry. 
