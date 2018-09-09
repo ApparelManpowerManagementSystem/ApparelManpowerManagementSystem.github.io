@@ -75,7 +75,8 @@ mysqli_close($connection); // Closing Connection with Server
         <label for="workerStatus">Worker Status:</label>
             <input type="text" class="form-control" id="workerStatus" placeholder="Enter Status" name="workerStatus">
     
-	
+	 </div>
+
        
     
     
@@ -86,7 +87,6 @@ mysqli_close($connection); // Closing Connection with Server
         <button type="submit" name="save" id="save" class="btn btn-success">Submit</button>
        </div>
     </div>
- </div>
         
    
  
