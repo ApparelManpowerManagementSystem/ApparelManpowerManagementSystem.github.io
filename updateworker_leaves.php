@@ -65,7 +65,7 @@ mysqli_close($connection); // Closing Connection with Server
            
         <div class="col-12">
          <button type="button" class="btn btn-danger">Cancel</button>
-        <button type="submit" name="save" id="save" class="btn btn-success">Submit</button>
+        <button type="submit" name="save" id="save" class="btn btn-success">Update</button>
        </div>
     </div>
         
