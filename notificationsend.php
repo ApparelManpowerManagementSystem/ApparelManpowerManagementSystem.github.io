@@ -30,6 +30,10 @@
      <label>Enter Notification ID</label>
      <input type="text" name="notificationID" id="notificationID" class="form-control">
     </div>
+       <div class="form-group">
+     <label>Enter User Type</label>
+     <input type="text" name="userType" id="userType" class="form-control">
+    </div>
     <div class="form-group">
      <label>Enter Notification</label>
      <textarea name="notification" id="notification" class="form-control" rows="5"></textarea>
@@ -68,7 +72,7 @@ $(document).ready(function(){
  
  $('#comment_form').on('submit', function(event){
   event.preventDefault();
-  if($('#notificationID').val() != '' && $('#notification').val() != '')
+  if($('#notificationID').val() != '' && $('#notification').val() != '' && $('#userType').val() != '')
   {
    var form_data = $(this).serialize();
    $.ajax({
@@ -81,6 +85,7 @@ $(document).ready(function(){
      load_unseen_notification();
     }
    });
+     //  alert("Data insert successfully");
   }
   else
   {
