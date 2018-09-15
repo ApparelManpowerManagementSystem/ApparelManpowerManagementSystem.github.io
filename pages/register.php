@@ -3,7 +3,7 @@
 if(isset($_POST['submitRegister'])){
     require_once("../db_config/config.php");
 
-    $name=$_POST['name'];
+    $userName=$_POST['name'];
     $mobile=$_POST['mobile'];
     $email=$_POST['email'];
     $password1=$_POST['pwd1'];
@@ -11,39 +11,33 @@ if(isset($_POST['submitRegister'])){
     $usertype=$_POST['role'];
 
     $hashed_password=hash('sha512',$password1);
+
     if($usertype==3){
         $id="W".(int)$mobile;
-
-        $userquery="INSERT INTO users VALUES('$id','$hashed_password','$usertype')";
-        if(mysqli_query($conn,$userquery)){
-            $query="INSERT INTO worker_personal (`workerID`,`workerName`,`workerPhone`,`workerEmail`) VALUES ('$id','$name','$mobile','$email')";
-
+        $name = $_FILES['file']['name'];
+        $target_dir = "../Assests/worker/";
+        $target_file = $target_dir . $_FILES["file"]["name"];
+        // Select file type
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        // Valid file extensions
+        $extensions_arr = array("jpg","jpeg","png","gif");
+        if( in_array($imageFileType,$extensions_arr) ){
+            $image = "$target_file";       
+            // Upload file
+            move_uploaded_file($_FILES['file']['tmp_name'],$target_dir.$name);
+            $userquery="INSERT INTO users VALUES('$id','$hashed_password','$usertype')";
+            mysqli_query($conn,$userquery);
+            $query="INSERT INTO worker (`workerID`,`workerName`,`workerPhone`,`workerEmail`,`workerImage`) VALUES ('$id','$useName','$mobile','$email','".$image."')";
             $result=mysqli_query($conn,$query);
-            if(mysqli_num_rows($result)>0){
-                
-                header("location:./worker.php");
-                echo '<script>alert("You are now registerd. Please use login")</script>';
-            }
-            else{
-                header("location:../index.php");
-            } 
-        }           
-    }
-    else if($usertype==2){
-        $id="S".(int)$mobile;
-
-        $userquery="INSERT INTO users VALUES('$id','$hashed_password','$usertype')";
-        if(mysqli_query($conn,$userquery)){
-            $query="INSERT INTO supplier_personal (`supID`,`supName`,`supPhone`,`supEmail`) VALUES ('$id','$name','$mobile','$email')";
-
-            $result=mysqli_query($conn,$query);
+            // Upload file
+            move_uploaded_file($_FILES['file']['tmp_name'],$target_dir.$name);
             if($result){
-                header("location: ../index.php");
+                echo "<script>window.location.replace('./worker.php');alert('Registration Success!!!');</script>";
             }
             else{
-                header("location: ../index.php");
+                echo "<script>alert('try again');</script>";
             } 
-        }
+        }            
     }
     else if($usertype==1){
         $id="C".(int)$mobile;
@@ -54,10 +48,10 @@ if(isset($_POST['submitRegister'])){
 
             $result=mysqli_query($conn,$query);
             if($result){
-                header("location: ../index.php");
+                echo "<script>window.location.replace('../index.php');alert('Registration Success!!! Login to continue');</script>";
             }
             else{
-                header("location: ../index.php");
+                echo "<script>window.location.replace('../index.php');alert('Try again!!!');</script>";
             } 
         }
     }

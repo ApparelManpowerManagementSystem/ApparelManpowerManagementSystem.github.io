@@ -1,16 +1,20 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Kuweni Manpower Solutions</title>
+        <title>Manpower Solutions</title>
         <link rel="shortcut icon" href="Assests/logo.png" />
         <link rel="stylesheet"  href="./css/home.css">
         <link rel="stylesheet"  href="./css/font.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="./js/star_rating.js"></script>
     </head>
     <body>
         <!--navigation bar-->
@@ -18,12 +22,12 @@
               <div class="container-fluid">
                
                 <ul class="nav navbar-nav">
-                  <li><a data-target="#aboutus_modal" data-toggle="modal" href="#"><font style="font-family:gabriola;font-size:25px">kuweni</font></a></li>
+                  <li><a data-target="#aboutus_modal" data-toggle="modal" href="#"><label style="font-size: 150%;padding:5px;border-radius: 5px;border: 1px solid lightgrey">Manpower Solutions</label></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     
-                  <li><a data-target="#signup_modal" data-toggle="modal" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                  <li><a data-target="#signin_modal" data-toggle="modal" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                  <li style="padding:5px;margin-right: 5px;border-radius: 5px;border: 1px solid lightgrey"><a data-target="#signup_modal" data-toggle="modal" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                  <li style="padding:5px;border-radius: 5px;border: 1px solid lightgrey"><a data-target="#signin_modal" data-toggle="modal" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
               </div>
             </nav>
@@ -31,6 +35,7 @@
         
         <!--banner image-->
         <div id="banner_image" class="container-fluid">
+
             <p><font>We have over <strong>10,000</strong> job offers</font></p>
         </div>
         <!--end banner image-->
@@ -42,10 +47,10 @@
             <div class="col-md-6">
                 <!--supplier job list-->
                 <div id="supplier_jobs" class="container-fluid">
-                    <label id="supplier_job_lbl" class="btn btn-danger"><h2>Newly posted jobs</h2></label>
+                    <label style="background-color:rgb(61, 63, 66);" id="supplier_job_lbl" class="btn btn-success"><h2>Newly posted jobs</h2></label>
                     <?php
                         require_once('./db_config/config.php');
-                        require_once('./pages/query_boxes/supplier_jobs.php');
+                        require_once('./pages/query_boxes/supplier_jobs_for_visitors.php');
                     ?>
                 </div>
                 <!--end supplier job list-->
@@ -54,7 +59,7 @@
             <div class="col-md-4">
                 <!--lable top rated members-->
                 <div class="row">
-                <label class="btn btn-info"  style="margin:10px 0 5px 0;width:100%;background-color:green;border:none"><h2>Top rated members</h2></label>  
+                <label class="btn btn-info"  style="background-color:rgb(61, 63, 66);margin:10px 0 5px 0;width:100%;border:none"><h2>Top rated Manpower members</h2></label>  
                 </div>
                 <!--end lable top rated members-->
                 
@@ -69,7 +74,9 @@
                 
             </div>
         </div>
-        
+
+
+    
         <!--About us modal-->
         <div>
            <div class="modal fade" id="aboutus_modal" role="dialog">
@@ -110,7 +117,7 @@
                             </div>
 
                             <div class="form-group">
-                                <input type="submit" class="form-control btn btn-info" style="width:100%" value="Sing In" name="submitLogin" required>
+                                <input type="submit" class="form-control btn btn-primary" style="width:100%" value="Sign In" name="submitLogin" required>
                             </div>
                         </form>
                         <!--end login form-->
@@ -132,7 +139,7 @@
                     </div>
                     <div class="modal-body">
                         <!--register form-->
-                        <form action="./pages/register.php" autocomplete="on" method="post">
+                        <form action="./pages/register.php" autocomplete="on" method="post" enctype='multipart/form-data'>
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Enter your name" name="name" required>
                             </div>
@@ -151,12 +158,17 @@
                             <div class="form-group">
                                 <select name="role" id="role" class="form-control">
                                     <option value="3">As a Worker</option>
-                                    <option value="2">As a Supplier</option>
                                     <option value="1">As a Company</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <input type="submit" class="form-control btn btn-success" value="Submit" name="submitRegister" required>
+                             <div class="form-group">
+                                <label style="width: 34%;display: inline-block;" type="password" class="form-control" >Upload your image</label> 
+                                <input style="width:65%;display: inline-block;" type='file' name='file' required>
+                                
+                            </div>
+                            
+                            <div class="form-group" >
+                                <input type="submit" class="form-control btn btn-success" value="SignUp" name="submitRegister" required>
                             </div>
                         </form>
                         <!--end register form-->
