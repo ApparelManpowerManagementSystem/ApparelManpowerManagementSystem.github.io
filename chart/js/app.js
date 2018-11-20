@@ -1,13 +1,13 @@
- $(function(){
+$(function(){
       $.ajax({
-        url: 'http://localhost/chart/chart_data.php',
+        url: 'http://http://localhost/chart/fusion.php',
         type: 'GET',
         success : function(data) {
           chartData = data;
           var chartProperties = {
-            "caption": "SUpplier Jobs status",
+            "caption": "Supplier Jobs Status",
             "xAxisName": "Job Type",
-            "yAxisName": "Job Count",
+            "yAxisName": "Job COunt",
             "rotatevalues": "1",
             "theme": "zune"
           };
@@ -25,15 +25,4 @@
           apiChart.render();
         }
       });
-    });
-	var apiChart = new FusionCharts({
-      type: 'column2d',
-      renderAt: 'api-chart-container',
-      width: '550',
-      height: '350',
-      dataFormat: 'json',
-      dataSource: {
-        "chart": chartProperties,
-        "data": chartData
-      }
     });
