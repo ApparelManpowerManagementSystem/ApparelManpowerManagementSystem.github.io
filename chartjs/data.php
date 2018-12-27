@@ -14,7 +14,9 @@ if(!$mysqli){
     die("Connection failed: ".$mysqli->error);
 }
 
-$query = sprintf("SELECT jobType,jobCount FROM supplier_job");
+//$selected = $_GET['Month'];
+$selected=3;
+$query = sprintf("SELECT jobType,SUM(jobCount) AS jobCount FROM supplier_job  GROUP BY jobType  ");
 
 $result= $mysqli->query($query);
 
@@ -27,3 +29,6 @@ $result->close();
 $mysqli->close();
 
 print json_encode($data);
+
+
+?>
